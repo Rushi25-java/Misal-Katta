@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kolhapuri Misal Pav – Mumbai</title>
+<style>
+:root{
+  --bg:#fff4dc; --ink:#3a1508; --red:#c8321a; --tari:#e8541a; --card:#ffffff; --muted:#7a4a33; --line:#f0d9b0;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#241008; --ink:#ffe9c7; --red:#ff6a45; --tari:#ff8a3d; --card:#35190d; --muted:#d9ac86; --line:#5a2d18;}
+}
+:root[data-theme="dark"]{--bg:#241008; --ink:#ffe9c7; --red:#ff6a45; --tari:#ff8a3d; --card:#35190d; --muted:#d9ac86; --line:#5a2d18;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hind","Segoe UI",system-ui,sans-serif;line-height:1.6}
+h1,h2,h3{font-family:"Rozha One",Georgia,serif;font-weight:400;line-height:1.15;margin:0}
+a{color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;font-weight:600}
+nav .logo{font-family:"Rozha One",Georgia,serif;font-size:1.2rem;color:var(--red)}
+nav a{text-decoration:none;margin-left:18px}
+nav a:focus-visible,.btn:focus-visible{outline:3px solid var(--tari);outline-offset:3px}
+.hero{padding:36px 0 56px;display:grid;gap:28px;align-items:center}
+@media(min-width:760px){.hero{grid-template-columns:1.1fr .9fr}}
+.hero h1{font-size:clamp(2.6rem,9vw,4.6rem);color:var(--red)}
+.hero p{font-size:1.15rem;max-width:34ch;color:var(--muted);margin:16px 0 24px}
+.btn{display:inline-block;background:var(--red);color:#fff;padding:12px 26px;border-radius:999px;text-decoration:none;font-weight:700}
+.bowl{width:100%;max-width:360px;justify-self:center}
+section{padding:44px 0}
+h2{font-size:2rem;margin-bottom:8px;color:var(--red)}
+.sub{color:var(--muted);margin:0 0 24px}
+.layers{display:grid;gap:14px}
+@media(min-width:640px){.layers{grid-template-columns:repeat(2,1fr)}}
+.layer{background:var(--card);border-left:8px solid var(--tari);padding:14px 18px;border-radius:6px}
+.layer:nth-child(2){border-color:#b5651d}.layer:nth-child(3){border-color:#e8b923}.layer:nth-child(4){border-color:#5b8c3a}
+.layer h3{font-size:1.15rem}
+.layer p{margin:4px 0 0;color:var(--muted)}
+.menu{list-style:none;margin:0;padding:0}
+.menu li{display:flex;gap:12px;align-items:baseline;padding:14px 0;border-bottom:2px dotted var(--line)}
+.menu .name{font-weight:700;font-size:1.1rem}
+.menu .desc{display:block;font-weight:400;font-size:.95rem;color:var(--muted)}
+.menu .fill{flex:1}
+.menu .price{font-weight:700;color:var(--red);white-space:nowrap}
+.info{background:var(--card);border-radius:10px;padding:22px;display:grid;gap:8px}
+footer{text-align:center;padding:28px 0 40px;color:var(--muted);font-size:.9rem}
+
+nav{position:sticky;top:0;background:var(--bg);z-index:5;border-bottom:1px solid var(--line)}
+.tbtn{width:38px;height:38px;padding:0;display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;background:var(--card);border:2px solid var(--line);color:var(--red);border-radius:50%;margin-left:14px;cursor:pointer}
+.tbtn svg{width:20px;height:20px}
+.tbtn .sun{display:none}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tbtn .moon{display:none}:root:not([data-theme="light"]) .tbtn .sun{display:block}}
+:root[data-theme="dark"] .tbtn .moon{display:none}
+:root[data-theme="dark"] .tbtn .sun{display:block}
+.tbtn:focus-visible{outline:3px solid var(--tari);outline-offset:3px}
+.cartlink{background:var(--red);color:#fff!important;border-radius:999px;padding:4px 14px}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 8px}
+.stat{background:var(--card);border-radius:10px;padding:12px 18px;flex:1;min-width:130px;text-align:center}
+.stat b{display:block;font-family:"Rozha One",Georgia,serif;font-size:1.6rem;color:var(--red);font-weight:400}
+.add{background:none;border:2px solid var(--red);color:var(--red);border-radius:999px;padding:4px 16px;font:inherit;font-weight:700;cursor:pointer}
+.add:hover{background:var(--red);color:#fff}
+.cart{background:var(--card);border-radius:10px;padding:22px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 0;border-bottom:1px dotted var(--line)}
+.qty button{width:30px;height:30px;border-radius:50%;border:2px solid var(--red);background:none;color:var(--red);font-weight:700;cursor:pointer}
+.qty span{display:inline-block;min-width:26px;text-align:center}
+.total{display:flex;justify-content:space-between;font-weight:700;font-size:1.2rem;margin:14px 0}
+.cart label{display:block;margin:10px 0 4px;font-weight:600}
+.cart input,.cart select{width:100%;padding:10px;border-radius:8px;border:2px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
+.cart .btn{border:0;cursor:pointer;font:inherit;font-weight:700;margin-top:16px;width:100%}
+#msg{margin-top:14px;padding:14px;border-radius:8px;background:var(--bg);display:none;border-left:8px solid #5b8c3a}
+.reviews{display:grid;gap:14px}
+@media(min-width:640px){.reviews{grid-template-columns:repeat(3,1fr)}}
+.rev{background:var(--card);padding:18px;border-radius:10px}
+.rev .st{color:#e8b923;letter-spacing:2px}
+details{background:var(--card);border-radius:8px;padding:12px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700}
+details p{margin:8px 0 0;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <span class="logo">Misal Katta</span>
+    <div><a href="#layers">Kaise banta hai</a><a href="#menu">Menu</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a><button class="tbtn" id="theme" aria-label="Dark ya light mode badlo"><svg class="moon" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></button><a class="cartlink" href="#order">Cart (<span id="cc">0</span>)</a></div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <h1>Jhanjhanit misal, garam pav.</h1>
+      <p>Sprouted matki usal, crunchy farsan aur laal tarri. Subah ke nashte ka asli Maharashtrian swad.</p>
+      <a class="btn" href="#menu">Menu dekho</a>
+    </div>
+    <svg class="bowl" viewBox="0 0 360 300" role="img" aria-label="Bowl of misal with pav">
+      <ellipse cx="170" cy="262" rx="140" ry="16" fill="#000" opacity=".12"/>
+      <path d="M30 140h280c0 70-50 112-140 112S30 210 30 140z" fill="#b5381d"/>
+      <ellipse cx="170" cy="140" rx="140" ry="34" fill="#e8541a"/>
+      <ellipse cx="170" cy="138" rx="118" ry="24" fill="#c8321a"/>
+      <g fill="#e8b923"><rect x="90" y="118" width="46" height="7" rx="3" transform="rotate(-12 90 118)"/><rect x="150" y="112" width="52" height="7" rx="3" transform="rotate(8 150 112)"/><rect x="200" y="124" width="44" height="7" rx="3" transform="rotate(-6 200 124)"/><rect x="120" y="132" width="40" height="7" rx="3" transform="rotate(14 120 132)"/></g>
+      <g fill="#5b8c3a"><circle cx="110" cy="104" r="6"/><circle cx="170" cy="100" r="7"/><circle cx="226" cy="108" r="6"/></g>
+      <rect x="156" y="88" width="30" height="18" rx="4" fill="#fff4dc"/>
+      <g fill="#f2c27a" stroke="#c98a3b" stroke-width="3"><rect x="262" y="196" width="78" height="46" rx="20"/><rect x="236" y="226" width="78" height="46" rx="20"/></g>
+      <g stroke="#e8541a" stroke-width="5" stroke-linecap="round" opacity=".6" fill="none"><path d="M120 70c-10-14 10-22 0-36"/><path d="M170 62c-10-14 10-22 0-36"/><path d="M220 70c-10-14 10-22 0-36"/></g>
+    </svg>
+  </header>
+  <div class="stats">
+    <div class="stat"><b>25+</b>saal purani recipe</div>
+    <div class="stat"><b>500+</b>plates roz</div>
+    <div class="stat"><b>4.8</b>customer rating</div>
+  </div>
+
+  <section id="layers">
+    <h2>Ek bowl, chaar layer</h2>
+    <p class="sub">Har layer ka apna kaam hai.</p>
+    <div class="layers">
+      <div class="layer"><h3>Usal</h3><p>Matki ki sprouted usal, halka masaledaar.</p></div>
+      <div class="layer"><h3>Kat / Tarri</h3><p>Tel mein tala hua laal rassa. Jitna chaho utna teekha.</p></div>
+      <div class="layer"><h3>Farsan</h3><p>Upar se crunchy sev aur chivda.</p></div>
+      <div class="layer"><h3>Kanda, nimbu, kothimbir</h3><p>Kaccha pyaaz, lemon aur hara dhaniya.</p></div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <h2>Menu</h2>
+    <p class="sub">Saare plates pav ke saath.</p>
+    <ul class="menu">
+      <li><span class="name">Misal Pav<span class="desc">2 pav, regular tarri</span></span><span class="fill"></span><span class="price">₹90</span><button class="add" data-i="0">Add</button></li>
+      <li><span class="name">Kolhapuri Misal<span class="desc">Extra teekha, extra tarri</span></span><span class="fill"></span><span class="price">₹110</span><button class="add" data-i="1">Add</button></li>
+      <li><span class="name">Dahi Misal<span class="desc">Thanda dahi upar se</span></span><span class="fill"></span><span class="price">₹110</span><button class="add" data-i="2">Add</button></li>
+      <li><span class="name">Extra Pav (2)<span class="desc">Butter mein sekke hue</span></span><span class="fill"></span><span class="price">₹20</span><button class="add" data-i="3">Add</button></li>
+      <li><span class="name">Masala Chaas<span class="desc">Glass</span></span><span class="fill"></span><span class="price">₹30</span><button class="add" data-i="4">Add</button></li>
+    </ul>
+  </section>
+
+
+  <section id="order">
+    <h2>Apna order</h2>
+    <p class="sub">Menu se Add dabao, phir yahan naam daalo.</p>
+    <div class="cart">
+      <div id="lines"><p>Cart khali hai. Menu se kuch add karo.</p></div>
+      <div class="total"><span>Total</span><span id="tot">₹0</span></div>
+      <label for="nm">Naam</label><input id="nm" placeholder="Tumhara naam">
+      <label for="sp">Teekha level</label>
+      <select id="sp"><option>Mild</option><option selected>Medium</option><option>Kolhapuri teekha</option></select>
+      <button class="btn" id="go">Order karo</button>
+      <div id="msg" role="status"></div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <h2>Log kya kehte hain</h2>
+    <p class="sub">Ratings.</p>
+    <div class="reviews">
+      <div class="rev"><div class="st">★★★★★</div><p>Tarri ekdum zabardast, pav bhi garam mila.</p><b>Amit, Dadar</b></div>
+      <div class="rev"><div class="st">★★★★★</div><p>Kolhapuri misal try karo, pasina aa jayega.</p><b>Sneha, Thane</b></div>
+      <div class="rev"><div class="st">★★★★☆</div><p>Dahi misal best laga. Thodi bheed hoti hai subah.</p><b>Rohan, Kurla</b></div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>Aksar poochhe sawal</h2>
+    <details><summary>Kya misal bahut teekha hota hai?</summary><p>Tum teekha level choose kar sakte ho: Mild, Medium ya Kolhapuri teekha.</p></details>
+    <details><summary>Kya pav ke saath aata hai?</summary><p>Haan, har plate ke saath 2 butter pav aate hain.</p></details>
+    <details><summary>Kya vegetarian hai?</summary><p>Haan, poora misal vegetarian hai.</p></details>
+  </section>
+
+  <section id="visit">
+    <h2>Visit karo</h2>
+    <div class="info">
+      <div><strong>Address:</strong> Station Road, Opposite Of Sai Medical , Mumbai Central  </div>
+      <div><strong>Timing:</strong> Roz subah 7 se dopahar 2 baje</div>
+      <div><strong>Phone:</strong> 98XXXXXX00</div>
+    </div>
+  </section>
+
+  <footer>© 2026 Misal Katta. Made with teekha pyaar.</footer>
+</div>
+<script>
+var M=[["Misal Pav",90],["Kolhapuri Misal",110],["Dahi Misal",110],["Extra Pav (2)",20],["Masala Chaas",30]],C={};
+function draw(){var h="",t=0,n=0;for(var k in C){var q=C[k],p=M[k][1]*q;t+=p;n+=q;
+h+='<div class="row"><span>'+M[k][0]+'</span><span class="qty"><button data-m="'+k+'" aria-label="Kam karo">-</button><span>'+q+'</span><button data-p="'+k+'" aria-label="Badhao">+</button></span><b>₹'+p+'</b></div>';}
+document.getElementById("lines").innerHTML=h||"<p>Cart khali hai. Menu se kuch add karo.</p>";
+document.getElementById("tot").textContent="₹"+t;document.getElementById("cc").textContent=n;}
+document.addEventListener("click",function(e){var d=e.target.dataset;
+if(d.i!==undefined){C[d.i]=(C[d.i]||0)+1;draw();}
+if(d.p!==undefined){C[d.p]++;draw();}
+if(d.m!==undefined){if(--C[d.m]<1)delete C[d.m];draw();}});
+document.getElementById("go").onclick=function(){var m=document.getElementById("msg");m.style.display="block";
+if(!Object.keys(C).length){m.textContent="Pehle cart mein kuch add karo.";return;}
+var nm=document.getElementById("nm").value.trim()||"Dost";
+m.textContent="Shukriya "+nm+"! "+document.getElementById("cc").textContent+" item, total "+document.getElementById("tot").textContent+", "+document.getElementById("sp").value+" teekha. Aapka order ban raha hai.";C={};draw();};
+document.getElementById("theme").onclick=function(){var r=document.documentElement,d=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;r.dataset.theme=d?"light":"dark";};
+</script>
+</body>
+</html>
