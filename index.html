@@ -28,7 +28,7 @@ nav a:focus-visible,.btn:focus-visible{outline:3px solid var(--tari);outline-off
 .hero h1{font-size:clamp(2.6rem,9vw,4.6rem);color:var(--red)}
 .hero p{font-size:1.15rem;max-width:34ch;color:var(--muted);margin:16px 0 24px}
 .btn{display:inline-block;background:var(--red);color:#fff;padding:12px 26px;border-radius:999px;text-decoration:none;font-weight:700}
-.bowl{width:100%;max-width:360px;justify-self:center}
+.bowl{width:100%;max-width:360px;height:auto;justify-self:center;border-radius:16px;object-fit:cover}
 section{padding:44px 0}
 h2{font-size:2rem;margin-bottom:8px;color:var(--red)}
 .sub{color:var(--muted);margin:0 0 24px}
@@ -77,6 +77,7 @@ nav{position:sticky;top:0;background:var(--bg);z-index:5;border-bottom:1px solid
 details{background:var(--card);border-radius:8px;padding:12px 18px;margin-bottom:10px}
 summary{cursor:pointer;font-weight:700}
 details p{margin:8px 0 0;color:var(--muted)}
+
 </style>
 </head>
 <body>
@@ -92,17 +93,7 @@ details p{margin:8px 0 0;color:var(--muted)}
       <p>Sprouted matki usal, crunchy farsan aur laal tarri. Subah ke nashte ka asli Maharashtrian swad.</p>
       <a class="btn" href="#menu">Menu dekho</a>
     </div>
-    <svg class="bowl" viewBox="0 0 360 300" role="img" aria-label="Bowl of misal with pav">
-      <ellipse cx="170" cy="262" rx="140" ry="16" fill="#000" opacity=".12"/>
-      <path d="M30 140h280c0 70-50 112-140 112S30 210 30 140z" fill="#b5381d"/>
-      <ellipse cx="170" cy="140" rx="140" ry="34" fill="#e8541a"/>
-      <ellipse cx="170" cy="138" rx="118" ry="24" fill="#c8321a"/>
-      <g fill="#e8b923"><rect x="90" y="118" width="46" height="7" rx="3" transform="rotate(-12 90 118)"/><rect x="150" y="112" width="52" height="7" rx="3" transform="rotate(8 150 112)"/><rect x="200" y="124" width="44" height="7" rx="3" transform="rotate(-6 200 124)"/><rect x="120" y="132" width="40" height="7" rx="3" transform="rotate(14 120 132)"/></g>
-      <g fill="#5b8c3a"><circle cx="110" cy="104" r="6"/><circle cx="170" cy="100" r="7"/><circle cx="226" cy="108" r="6"/></g>
-      <rect x="156" y="88" width="30" height="18" rx="4" fill="#fff4dc"/>
-      <g fill="#f2c27a" stroke="#c98a3b" stroke-width="3"><rect x="262" y="196" width="78" height="46" rx="20"/><rect x="236" y="226" width="78" height="46" rx="20"/></g>
-      <g stroke="#e8541a" stroke-width="5" stroke-linecap="round" opacity=".6" fill="none"><path d="M120 70c-10-14 10-22 0-36"/><path d="M170 62c-10-14 10-22 0-36"/><path d="M220 70c-10-14 10-22 0-36"/></g>
-    </svg>
+    <img class="bowl" src="images.jpg" alt="Bowl of misal with pav">
   </header>
   <div class="stats">
     <div class="stat"><b>25+</b>saal purani recipe</div>
@@ -168,6 +159,7 @@ details p{margin:8px 0 0;color:var(--muted)}
   <section id="visit">
     <h2>Visit karo</h2>
     <div class="info">
+      
       <div><strong>Address:</strong> Station Road, Opposite Of Sai Medical , Mumbai Central  </div>
       <div><strong>Timing:</strong> Roz subah 7 se dopahar 2 baje</div>
       <div><strong>Phone:</strong> 98XXXXXX00</div>
